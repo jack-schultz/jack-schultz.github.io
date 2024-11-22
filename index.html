@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jack Schultz - Aspiring Software Developer with expertise in Python, C++, and more. View my projects, skills, and contact information.">
-    <title>Jack Schultz | Programmer CV</title>
-    <link rel="stylesheet" href="scss/main.css">
+    <title>Jack Schultz</title>
+    <link rel="stylesheet" href="styles/main.css">
 
     <!-- Open Graph Meta Tags -->
     <meta content="Jack Schultz | Programmer CV" property="og:title">
@@ -41,15 +41,17 @@
     <main>
         <section id="about">
             <h1>About Me</h1>
-            <p>Hi, I'm Jack Schultz, a student passionate about programming and technology. I've been coding for the past four years and have experience working with various programming languages such as Python, JavaScript, and C. I enjoy building software projects that solve interesting problems and teaching what I know to other students.</p>
-            <p><strong>High School:</strong> Prince Alfred College</p>
+            <p>Hi, I'm Jack Schultz, a student passionate about programming and technology. I've been coding since early 2021
+                and have experience working with various programming languages such as Python, JavaScript, and C. I enjoy building software
+                projects that solve interesting problems and teaching what I know to other students. All of my major projects have been using a
+                coding language or library i w ass unfamiliar with, this has allowed me to develop skills enabling me to learn on the go.</p>
             <p><strong>Hobbies:</strong> Volleyball, Coding, Networking, Cycling, Learning Spanish, Robotics, Reading, and Gaming.</p>
         </section>
 
         <section id="achievements">
             <h2>Achievements</h2>
             <ul>
-                <li><strong>PAC Scholarship</strong></li>
+                <li><strong>PAC Colin Hassell Scholarship</strong></li>
                 <li><strong>Ethics Award:</strong> Clarnett Family Ethics Award chosen by a teacher vote</li>
                 <li><strong>Belonging Award:</strong> Chosen by a student vote</li>
                 <li><strong>Volleyball Coaches Award</strong></li>
@@ -67,15 +69,16 @@
                     <ul>
                         <li>Python</li>
                         <li>C++</li>
+                        <li>SQL</li>
                     </ul>
                 </div>
                 <div class="blocks-category">
-                    <h3>Basic Knowledge Coding Languages</h3>
+                    <h3>Coding Languages I Have Used</h3>
                     <ul>
                         <li>TypeScript</li>
                         <li>Java</li>
                         <li>C#</li>
-                        <li>HTML & CSS</li>
+                        <li>HTML, CSS & SCSS</li>
                     </ul>
                 </div>
                 <div class="blocks-category">
@@ -87,69 +90,116 @@
                     </ul>
                 </div>
                 <div class="blocks-category">
-                    <h3>Technologies</h3>
+                    <h3>Technologies I Have Used</h3>
                     <ul>
                         <li>Databases (SQL, MongoDB)</li>
+                        <li>RESTful APIs</li>
+                        <li>WebSocket connections</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Personal Projects</h2>
             <ul class="wide-list">
                 <li>
-                    <h3>1. Discord Bot (>120 servers)</h3>
-                    <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
-                    <p>
-                        Discord Bot used in over
-                    </p>
-                    <p><strong>Languages:</strong> Python, HTML, CSS, SASS and SQLite</p>
-                    <p><strong>Libraries:</strong> Discord.py</p>
-                    <a href="projects/discord-bot.html" class="button">Read More</a>
-                    <a href="https://jack-schultz.github.io/Discord-Bot-py/index.html" class="button">View it's Website</a>
-                    <a href="https://discord.com/application-directory/853490879753617458" class="button">View on Discord.com</a>
-                    <a href="https://github.com/Jack-Schultz/Paper-io" class="button">View on GitHub</a>
+                    <div>
+                        <h3>1. Discord Bot (>120 servers)</h3>
+                        <p>
+                            I host a Discord bot (named "Dr Robotnic") on my own server and currently services over 120 discord guilds (chatrooms).
+                            It provides functionality to dynamically create voice channels for users as they are needed. This declutters the chatroom
+                            and gives user's control over their personal voice channel.
+                        </p>
+                        <p><strong>Languages:</strong> Python, SQLite, HTML and SCSS</p>
+                        <p><strong>Libraries:</strong> Discord.py</p>
+                        <a href="https://meltedbutter77.github.io/Robotnic/index.html" class="button">Read More</a>
+                        <a href="https://discord.com/application-directory/853490879753617458" class="button">View on Discord.com</a>
+                        <a href="https://github.com/Jack-Schultz/Paper-io" class="button">GitHub</a>
+                    </div>
+                    <img src="media/gifs/dr-robotnic.gif" alt="Animated screenshot of Discord Bot" width="400">
                 </li>
 
                 <li>
-                    <h3>2. Tetris Clone</h3>
-                    <!--  <img src="images/tetris.png" alt="Screenshot of Tetris game"> -->
-                    <p>
-                        Created a classic Tetris game with the ability to hold one piece. Written in
-                        Python using the Pygame-ce library.
-                    </p>
-                    <p><strong>Language:</strong> Python</p>
-                    <p><strong>Libraries:</strong> Pygame-ce Framework, PygBag</p>
-                    <a href="projects/tetris.html" class="button">Read More</a>
-                    <a href="https://meltedbutter77.itch.io/tetris" class="button">Play on Itch.io</a>
-                    <a href="https://github.com/Jack-Schultz/Tetris" class="button">View on GitHub</a>
+                    <div>
+                        <h3>2. Home Server</h3>
+                        <p>
+                            I bought a mini-computer to host my Discord Bot, Minecraft servers and Nextcloud.
+                        </p>
+                        <p><strong>Relevance:</strong> This project has given me a better understanding of the Linux operating system, docker,
+                            docker-compose and general networking knowledge about modems, routers, VPNs, DNS traffic, IP Addresses, Forwarding Ports, Domains, Reverse Proxies,
+                            Tunneling through Cloudflare and remote management of a non-desktop machine through the command line.</p>
+                        <p><strong>Technologies:</strong> Linux & Docker</p>
+                        <a href="projects/home-server.html" class="button">Read More</a>
+                        <a href="https://mcmap.meltedbutter.xyz/" class="button">Online Minecraft Server Map</a>
+                    </div>
                 </li>
 
                 <li>
-                    <h3>3. Minecraft Pet Protection Plugin (>100 Downloads)</h3>
-                    <!--  <img src="images/tetris.png" alt="Screenshot of Tetris game"> -->
-                    <p>
-                        This Minecraft plugin prevents players from accidentally harming their tamed pets and disables fall damage for pets, offering better protection and safety during gameplay.
-                    </p>
-                    <p><strong>Language:</strong> Java</p>
-                    <p><strong>Libraries:</strong> Minecraft Spigot Library</p>
-                    <a href="https://modrinth.com/plugin/palprotector" class="button">View Online</a>
-                    <a href="https://github.com/Jack-Schultz/pal-protector" class="button">View on GitHub</a>
+                    <div>
+                        <h3>3. Tetris Clone</h3>
+                        <p>
+                            Created a classic Tetris game with the ability to hold one piece. Written in
+                            Python using the Pygame-ce library.
+                        </p>
+                        <p><strong>Relevance:</strong> </p>
+                        <p><strong>Language:</strong> Python</p>
+                        <p><strong>Technologies:</strong> Spigot API</p>
+                        <a href="projects/tetris.html" class="button">Read More</a>
+                        <a href="https://meltedbutter77.itch.io/tetris" class="button">Play on Itch.io</a>
+                        <a href="https://github.com/Jack-Schultz/Tetris" class="button">GitHub</a>
+                    </div>
+                    <img src="media/gifs/tetris.gif" alt="Animated screenshot of Tetris game" width="300" height="300">
                 </li>
 
                 <li>
-                    <h3>4. Paper.io Clone</h3>
-                    <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
-                    <p>
-                        A simple game in which multiple players battle over control of the background
-                        by enclosing areas to fill it with your team's color. Written in Python using
-                        the Pygame-ce library.
-                    </p>
-                    <p><strong>Language:</strong> Python</p>
-                    <p><strong>Libraries:</strong> Pygame-ce Framework</p>
-                    <a href="projects/paper-io.html" class="button">Read More</a>
-                    <a href="https://github.com/Jack-Schultz/Paper-io" class="button">View on GitHub</a>
+                    <div>
+                        <h3>4. Minecraft Pet Protection Plugin (>100 Downloads)</h3>
+                        <p>
+                            This Minecraft plugin prevents players from accidentally harming their tamed pets and disables fall damage for pets, offering better
+                            protection and safety during gameplay.
+                        </p>
+                        <p><strong>Relevance:</strong> The main focus of this project was to learn the basics of Java by activly applying what I learnt through the Spigot API.</p>
+                        <p><strong>Language:</strong> Java</p>
+                        <p><strong>Libraries:</strong> Minecraft Spigot Library</p>
+                        <a href="https://modrinth.com/plugin/palprotector" class="button">View Online</a>
+                        <a href="https://github.com/Jack-Schultz/pal-protector" class="button">View on GitHub</a>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div>
+                        <h3>5. Paper.io Clone</h3>
+                        <p>
+                            A simple game in which multiple players battle over control of the background
+                            by enclosing areas to fill it with your team's color. Written in Python using
+                            the Pygame-ce library.
+                        </p>
+                        <p><strong>Relevance:</strong> The main focus of this project was to focus on solving more complicated problems, my favourite 2 were
+                            figuring out how to fill the area drawn by a player's tail and how to make the player move smoothly instead of 20 pixels every x
+                            milliseconds.</p>
+                        <p><strong>Language:</strong> Python</p>
+                        <p><strong>Libraries:</strong> Pygame-ce Framework</p>
+                        <a href="projects/paper-io.html" class="button">Read More</a>
+                        <a href="https://github.com/Jack-Schultz/Paper-io" class="button">View on GitHub</a>
+                    </div>
+                    <img src="media/gifs/paper-io.gif" alt="Animated screenshot of Paper IO game" width="300" height="300">
+                </li>
+
+                <li>
+                    <div>
+                        <h3>6. Arduino Claw Arm</h3>
+                        <p>
+                            a simple set of servo motors that can be used to control a claw arm and move it forward and backwards coded in C++.
+                        </p>
+                        <p><strong>Relevance:</strong> Working with a real-world physical object taught me about being flexible in my coding approach
+                            and allowing for unexpected behaviour.</p>
+                        <p><strong>Language:</strong> C++</p>
+                        <p><strong>Libraries:</strong> Arduino</p>
+                        <a href="projects/arduino-claw-arm.html" class="button">Read More</a>
+                        <a href="https://github.com/Jack-Schultz/Paper-io" class="button">View on GitHub</a>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -158,43 +208,57 @@
             <h2>Experience</h2>
             <ul class="wide-list">
                 <li>
-                    <h3>250 Hours building on <a href="https://autocode.com/">Autocode</a> in JavaScript </h3>
-                    <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
-                    <p>
-                        Autocode allowed for in-web editing of projects and active collaboration.
-                        I spent many hours within this community spending 250 hours developing my own
-                        projects like a moderation discord bot which gained over <strong>10,000 downloads</strong>.
-                        Furthermore, I became involved in the community and was recognised as a
-                        "Community Hero" teaching others how to create their own projects.
-                    </p>
-                    <p><strong>Technologies:</strong> JavaScript, REST Api, Discord.js</p>
-                    <p><strong>Contact:</strong> Keith Horwood for more details: <a href="mailto:keith.w.horwood@gmail.com">keith.w.horwood@gmail.com</a></p>
-                    <a href="experience/autocode.html" class="button">Read More</a>
+                    <div>
+                        <h3>250 Hours building on <a href="https://autocode.com/">Autocode</a> in JavaScript </h3>
+                        <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
+                        <p>
+                            Autocode allowed for in-web editing of projects and active collaboration.
+                            I spent many hours within this community spending 250 hours developing my own
+                            projects like a moderation discord bot which gained over <strong>10,000 downloads</strong>.
+                            Furthermore, I became involved in the community and was recognised as a
+                            "Community Hero" teaching others how to create their own projects.
+                        </p>
+                        <p><strong>Technologies:</strong> JavaScript, REST Api, Discord.js</p>
+                        <p><strong>Contact:</strong> Keith Horwood for more details: <a href="mailto:keith.w.horwood@gmail.com">keith.w.horwood@gmail.com</a></p>
+                        <a href="experience/autocode.html" class="button">Read More</a>
+                    </div>
                 </li>
                 <li>
-                    <h3>Creating a new Coding co-curricular during High School</h3>
-                    <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
-                    <p>
-                        <!-- TODO: Add Text -->
-                    </p>
-                    <p><strong>Language:</strong> Python</p>
-                    <p><strong>Technologies:</strong> PyGame Framework</p>
-                    <p><strong>Contact:</strong> Mr Will Ellis for more details: <a href="mailto:wellis@pac.edu.au">wellis@pac.edu.au</a></p>
-                    <a href="experience/coding-club.html" class="button">Read More</a>
+                    <div>
+                        <h3>Creating a new Coding co-curricular during High School</h3>
+                        <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
+                        <p>
+                            <!-- TODO: Add Text -->
+                        </p>
+                        <p><strong>Language:</strong> Python</p>
+                        <p><strong>Technologies:</strong> PyGame Framework</p>
+                        <p><strong>Contact:</strong> Mr Will Ellis for more details: <a href="mailto:wellis@pac.edu.au">wellis@pac.edu.au</a></p>
+                        <a href="experience/coding-club.html" class="button">Read More</a>
+                    </div>
                 </li>
                 <li>
-                    <h3>Roblotics Club Mentor</h3>
-                    <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
-                    <p>
-                        I joined the Robotics Club early in my second year at PAC and 3D modeled our team's designs and wrote the code to control it.
-                        During my second year i became a team leader. I organised which members of my team were to complete which tasks and married each part together.
-                        In my last year of Secondary school, i returned as a mentor due to more limited free time from academics. I taught students how to problem solv using 3D modling softwars like inventor and audocad. Furthermore i assisted in teaching electronics and wiring robots together.
-                    </p>
-                    <p><strong>Languages:</strong> Python, C</p>
-                    <p><strong>Technologies:</strong> CAD, Electronics, Ardiuno</p>
-                    <p><strong>Contact:</strong> Mr Neptune Tang for more details: <a href="mailto:ntang@pac.edu.au">ntang@pac.edu.au</a></p>
-                    <a href="experience/robotics-club.html" class="button">Read More</a>
+                    <div>
+                        <h3>Roblotics Club Mentor</h3>
+                        <!--  <img src="images/paper-io.png" alt="Screenshot of Paper IO game"> -->
+                        <p>
+                            I joined the Robotics Club early in my second year at PAC and 3D modeled our team's designs and wrote the code to control it.
+                            During my second year i became a team leader. I organised which members of my team were to complete which tasks and married each part together.
+                            In my last year of Secondary school, i returned as a mentor due to more limited free time from academics. I taught students how to problem solv using 3D modling softwars like inventor and audocad. Furthermore i assisted in teaching electronics and wiring robots together.
+                        </p>
+                        <p><strong>Languages:</strong> Python, C</p>
+                        <p><strong>Technologies:</strong> CAD, Electronics, Ardiuno</p>
+                        <p><strong>Contact:</strong> Mr Neptune Tang for more details: <a href="mailto:ntang@pac.edu.au">ntang@pac.edu.au</a></p>
+                        <a href="experience/robotics-club.html" class="button">Read More</a>
+                    </div>
                 </li>
+            </ul>
+        </section>
+
+        <section id="volunteer">
+            <h2>Volunteer Work</h2>
+            <ul>
+                <li>Fork Tree</li>
+                <li>Mary Magdelane</li>
             </ul>
         </section>
 
