@@ -1,0 +1,36 @@
+.main-panel {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.main-panel h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.project-panel {
+  background: lightgray;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex; /* flexbox allows me to position the image and text next to each other */
+
+  h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between the image and the text */
+    margin-top: 10px;
+    border-radius: 10px; /* Optional: Round the corners of the image */
+  }
+}
+
+

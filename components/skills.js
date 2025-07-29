@@ -1,0 +1,12 @@
+export const skillsHTML = `
+<section class="main-panel">
+    <h2>Skills</h2>
+    <ul>
+        <li>Python (including pygame-ce)</li>
+        <li>Linux & Systemd Services</li>
+        <li>Git & GitHub Workflow</li>
+        <li>JavaScript, HTML & CSS</li>
+        <li>Public Speaking & Teaching (Coding Club, Robotics Mentor)</li>
+    </ul>
+</section>
+`;

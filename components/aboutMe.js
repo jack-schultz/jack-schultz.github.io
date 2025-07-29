@@ -1,0 +1,22 @@
+import { fetchJsonc } from '../helpers/stripJsonC.js';
+const data = await fetchJsonc('../data.jsonc');
+
+
+export const aboutmeHTML = `
+<section class="main-panel">
+    <h2>About Me</h2>
+    <p>
+        Hi, I'm <strong>MeltedButter</strong>, well that's my online name. I live in ${data.location} 
+        and I'm student and aspiring software developer with a strong passion for technology, 
+        problem-solving, and self-driven learning. Since 2021, I've built a range of 
+        personal projects, often diving into new languages and frameworks like Python, C++, 
+        and JavaScript with no formal instruction, just curiosity and persistence.
+    </p>
+    <p>
+        Whether I'm coding a Discord bot, running my own home server, or mentoring others 
+        in robotics, I enjoy the challenge of turning ideas into functioning software. 
+        I value learning by doing and love sharing knowledge with peers. Outside of coding, 
+        I'm active in ${data.hobbies}.
+    </p>
+</section>
+`;
