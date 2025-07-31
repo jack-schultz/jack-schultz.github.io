@@ -11,16 +11,27 @@
 
     <main>
         <section class="hero">
-            <h1>Hello, I'm MeltedButter</h1>
-            <p>Computer Science Student | Developer | Problem Solver</p>
+            <div class="hero-text">
+                <h1 class="page-title">Hello, I'm MeltedButter</h1>
+                <p>Computer Science Student | Developer | Problem Solver</p>
+            </div>
+            <section id="aboutme" class="main-panel"></section>
+
+            <h1 class="section-title">Have a look at some of my projects</h1>
         </section>
 
-        <section id="aboutme"></section>
-        <section id="skills"></section>
+        <div class="scrollable-container">
+            <div class="scrollable-container-panel"></div>
+            <div class="container-spacer"></div> <!-- Start spacer -->
 
-        <h1>Top projects</h1>
-        <section id="projectBlurb-discordBot"></section>
-        <section id="projectBlurb-tetris"></section>
+            <section id="projectBlurb-discordBot" class="project-panel"></section>
+            <section id="projectBlurb-paperio" class="project-panel"></section>
+            <section id="projectBlurb-tetris" class="project-panel"></section>
+
+            <div class="container-spacer"></div> <!-- End spacer -->
+        </div>
+
+        <section id="skills" class="main-panel"></section>
     </main>
 
     <footer id="footer"></footer>

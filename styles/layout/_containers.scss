@@ -1,0 +1,35 @@
+.scrollable-container {
+  width: 100vw;            // force full viewport width
+  position: relative;      // avoids overflow issues
+  left: 50%;               // move to center
+  right: 50%;
+  margin-left: -50vw;      // shift back by half the viewport width
+  margin-right: -50vw;
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box;
+
+  scrollbar-width: none;        // Firefox
+  -ms-overflow-style: none;     // IE/Edge (old)
+
+  &::-webkit-scrollbar {        // Chrome, Safari, Opera
+    display: none;
+  }
+
+  section {
+    background: darkgray;
+    max-width: 900px;
+    scroll-snap-align: center; // optional: snap alignment
+    flex-shrink: 0;        // prevent shrinking so all sections remain visible
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.container-spacer {
+  width: calc((100vw - 800px) / 2); // Spacer matches centering offset
+  flex-shrink: 0;
+}

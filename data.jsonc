@@ -1,5 +1,7 @@
 {
-  "hobbies": "Robotics, and Language Learning", // Volleyball, networking, traveling
-  "location": "Adelaide, Australia",
-  "robotnic_guilds": "185"
+  "ID": "text here"
+  /*
+  Insert {{ID}} anywhere in HTML content and it will be replaced with "text here"
+  I added this so i can update information that changes often
+  */
 }
