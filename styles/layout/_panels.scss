@@ -1,0 +1,97 @@
+.main-panel {
+  margin: 2rem auto 2rem;
+  padding: 1.5rem 2rem;
+
+  text-align: left;
+  max-width: 900px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  h2 {
+    border-bottom: 2px solid #ccc;
+  }
+}
+
+.timeline-panel {
+  max-width: 900px;
+  background: white;
+  padding: 1.5rem 2rem;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    // Timeline vertical line
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      width: 2px;
+      height: 100%;
+      background: #ccc;
+    }
+
+    li {
+      position: relative;
+      margin-left: 2.5rem;
+      padding-left: 1rem;
+      transition: margin-top 0.4s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -2.2rem;
+        top: 0.4rem;
+        width: 10px;
+        height: 10px;
+        background-color: #007BFF;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px #ccc;
+      }
+    }
+  }
+}
+
+.project-panel {
+  max-width: 900px;
+  margin: 2rem auto 2rem;
+
+  background: lightgray;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex; /* flexbox allows me to position the image and text next to each other */
+
+  h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  img {
+    width: 300px;
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    height: 100%; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between the image and the text */
+    margin-top: 10px;
+    border-radius: 10px; /* Optional: Round the corners of the image */
+  }
+}
+
+.scrollable-container-panel {
+  background: lightgray;
+}
