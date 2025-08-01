@@ -18,10 +18,21 @@ const sectionPaths = {
 
   'skills': '/content/lists/skills.html',
 
-  // Project blurbs
-  'projectBlurb-discordBot': '/content/projects/discordBot/blurb.html',
-  'projectBlurb-tetris': '/content/projects/tetris/blurb.html',
-  'projectBlurb-paperio': '/content/projects/paperio/blurb.html',
+  // Projects
+  'projects-about': '/content/projects/about.html',
+
+  'project-discordBot-blurb': '/content/projects/discordBot/blurb.html',
+  'project-discordBot-why': '/content/projects/discordBot/why.html',
+  'project-discordBot-challenge1': '/content/projects/discordBot/challenges/1.html',
+  'project-discordBot-challenge2': '/content/projects/discordBot/challenges/2.html',
+  'project-discordBot-challenge3': '/content/projects/discordBot/challenges/3.html',
+  'project-discordBot-features': '/content/projects/discordBot/features.html',
+  'project-discordBot-impact': '/content/projects/discordBot/impact.html',
+  'project-discordBot-skillsUsed': '/content/projects/discordBot/skillsUsed.html',
+
+  'project-tetris-blurb': '/content/projects/tetris/blurb.html',
+
+  'project-paperio-blurb': '/content/projects/paperio/blurb.html',
 };
 
 // Loop through each section defined in the map

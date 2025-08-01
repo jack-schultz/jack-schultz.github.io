@@ -145,6 +145,33 @@ footer {
   border-bottom: 2px solid #ccc;
 }
 
+.sub-panel {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: lightgray;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 1.5rem;
+}
+.sub-panel .image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.sub-panel img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.sub-panel h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
 .timeline-panel {
   max-width: 900px;
   background: white;
@@ -192,33 +219,6 @@ footer {
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 0 0 2px #ccc;
-}
-
-.project-panel {
-  max-width: 900px;
-  margin: 2rem auto 2rem;
-  background: lightgray;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex; /* flexbox allows me to position the image and text next to each other */
-}
-.project-panel h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
-}
-.project-panel img {
-  width: 300px;
-  flex-shrink: 0; /* Prevent the image from shrinking */
-  height: 100%; /* Maintain aspect ratio */
-  margin-right: 10px; /* Add space between the image and the text */
-  margin-top: 10px;
-  border-radius: 10px; /* Optional: Round the corners of the image */
-}
-
-.scrollable-container-panel {
-  background: lightgray;
 }
 
 .scrollable-container {
@@ -278,12 +278,12 @@ main {
 }
 
 .hero {
-  text-align: center;
   background: linear-gradient(to top, #7ad3e6, #222 100%, #222);
 }
-.hero .hero-text p, .hero .hero-text h1 {
+.hero .hero-text p, .hero .hero-text h1, .hero .hero-text h2 {
   color: #f4f4f4;
   margin: 0;
+  text-align: center;
 }
 .hero .main-panel {
   max-width: 600px;

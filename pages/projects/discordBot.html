@@ -4,16 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
-    <header id="site-header"></header>
+    <header id="header"></header>
 
     <main>
-        <section id="project-discordBot"></section>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">This is my Discord Bot</h1>
+                <p>I named it <strong>Dr Robotnic</strong></p>
+            </div>
+            <section id="project-discordBot-why" class="main-panel"></section>
+
+
+        </section>
+
+        <section id="project-discordBot-features" class="main-panel"></section>
+        <section id="project-discordBot-impact" class="main-panel"></section>
+        <section id="project-discordBot-skillsUsed" class="main-panel"></section>
+
+        <h1 class="section-title">Challenges</h1>
+
+        <div class="scrollable-container">
+            <div class="scrollable-container-panel"></div>
+            <div class="container-spacer"></div> <!-- Start spacer -->
+
+            <section id="project-discordBot-challenge1" class="sub-panel"></section>
+            <section id="project-discordBot-challenge2" class="sub-panel"></section>
+            <section id="project-discordBot-challenge3" class="sub-panel"></section>
+
+            <div class="container-spacer"></div> <!-- End spacer -->
+        </div>
+
     </main>
 
-    <footer id="site-footer"></footer>
+    <footer id="footer"></footer>
     <script type="module" src="/scripts/injectContent.js"></script>
 </body>
 </html>

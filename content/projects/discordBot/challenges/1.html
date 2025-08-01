@@ -1,0 +1,61 @@
+<div>
+    <h2>Storing Information</h2>
+
+    <h3>Aim</h3>
+    <p>
+        When a user joins a specific, pre-determined voice channel (channel hub), I want to create
+        a new voice channel (temporary voice channel) and move them into it. When the user leaves
+        that channel, the temporary voice channel should be deleted.
+    </p>
+
+    <h3>Initial Plan</h3>
+    <p>
+        Originally, I was planning to only store the channel hubs' IDs and keep the temporary voice
+        channels' IDs in a list in memory. However, this approach had a major flaw. If the bot
+        restarted or crashed, it would stop tracking any existing temporary voice channels. This
+        meant admins would have to manually delete any leftover temporary channels.
+    </p>
+
+    <h3>Improved Solution</h3>
+    <p>
+        To fix this issue, I decided to store temporary voice channel IDs in a database as well.
+        The only question was: which type of database? This lead me to lightly research different
+        types of databases. For my use case, I ended up choosing SQLite, as it's a simple and
+        lightweight solution that works well. Since it's stored in a file, I could view and query
+        the database easily through my IDE, which helped a lot during the learning process.
+    </p>
+
+    <h3>Refactoring for Maintainability</h3>
+    <p>
+        As the project grew, manually managing the database queries became messy and hard to track.
+        To make things cleaner, I went back and created a class to abstract away the database
+        interactions. This allowed me to reuse code for both storing and retrieving data, making
+        things much more maintainable.
+    </p>
+    <p>
+        Another interesting problem I ran into was how to handle adding new columns to the database
+        as I introduced more functionality. To solve this, I wrote a method that ensured the tables
+        were up to date by checking for missing columns and adding them as needed. I kept a
+        dictionary of new columns to track what needed to be added if the database was created
+        before certain changes. This meant that if someone else was hosting the bot and wanted
+        to update, the new columns would be automatically added to their existing database,
+        ensuring forward compatibility without any manual intervention.
+    </p>
+
+    <h2>Results</h2>
+    <p>
+        The bot now consistently handles temporary voice channels without leaving any orphaned
+        ones behind, even after restarts or crashes. SQLite proved to be reliable and low-maintenance,
+        and the abstraction layer made the overall codebase cleaner and easier to work with. Users
+        were moved seamlessly between channels, and admins no longer had to worry about manual cleanups.
+    </p>
+
+    <h2>What I Learned</h2>
+    <p>
+        I learned that even small-scale features can benefit from persistent storage and a bit
+        of foresight into failure cases. I also gained a much deeper understanding of working
+        with SQLite in a real project and how to abstract logic in a way that improves
+        maintainability. Most importantly, I saw the value of planning for edge cases, especially
+        in bots that are expected to run 24/7.
+    </p>
+</div>
