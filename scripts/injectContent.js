@@ -33,6 +33,12 @@ const sectionPaths = {
   'project-tetris-blurb': '/content/projects/tetris/blurb.html',
 
   'project-paperio-blurb': '/content/projects/paperio/blurb.html',
+
+  'project-codingClub-blurb': '/content/projects/codingClub/blurb.html',
+
+  'project-thisWebsite-blurb': '/content/projects/this-website/blurb.html',
+
+  'project-game-blurb': '/content/projects/game/blurb.html',
 };
 
 // Loop through each section defined in the map
