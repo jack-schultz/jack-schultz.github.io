@@ -10,12 +10,19 @@
 @import 'layout/panels';
 @import 'layout/containers';
 
+html {
+  margin: 0;
+  padding: 0;
+  background-color: $secondary-color; //
+  overflow-x: hidden; // prevents horizontal page scroll :)
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #7ad3e6;
-  color: #333;
+  background-color: $background-color;
+  color: $text-dark-color;
 }
 
 main {
@@ -36,7 +43,7 @@ main {
 .hero {
   .hero-text {
     p, h1, h2 {
-      color: #f4f4f4;
+      color: $text-light-color;
       margin: 0;
       text-align: center;
     }
@@ -44,5 +51,5 @@ main {
   .main-panel {
     max-width: 600px;
   }
-  background: linear-gradient(to top, #7ad3e6, #222 100%, #222);
+  background: linear-gradient(to top, $background-color, $secondary-color 100%, $secondary-color);
 }

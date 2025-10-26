@@ -1,35 +1,92 @@
 .scrollable-container {
-  width: 100vw;            // force full viewport width
-  position: relative;      // avoids overflow issues
-  left: 50%;               // move to center
+  // --- Layout & centering logic ---
+  width: 100vw;
+  position: relative;
+  left: 50%;
   right: 50%;
-  margin-left: -50vw;      // shift back by half the viewport width
+  margin-left: -50vw;
   margin-right: -50vw;
-  overflow-x: auto;
+
   display: flex;
-  gap: 1rem;
+  gap: 0;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
-  scrollbar-width: none;        // Firefox
-  -ms-overflow-style: none;     // IE/Edge (old)
+  // Hide scrollbars cross-browser
+  scrollbar-width: none;       // Firefox
+  -ms-overflow-style: none;    // IE/Edge
+  &::-webkit-scrollbar { display: none; }
 
-  &::-webkit-scrollbar {        // Chrome, Safari, Opera
-    display: none;
-  }
-
+  // Each project section
   section {
-    background: darkgray;
-    max-width: 900px;
-    scroll-snap-align: center; // optional: snap alignment
-    flex-shrink: 0;        // prevent shrinking so all sections remain visible
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 1.5rem 2rem;
+    opacity: 0.7;
+    transform: scale(0.9);
+    transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+
+    &.active {
+      transform: scale(1);
+      opacity: 1;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+  }
+
+  // Responsive layout
+  @media (max-width: 900px) {
+    section {
+      flex-direction: column-reverse;
+      width: 90vw;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+
+      div {
+        align-items: center;
+      }
+    }
   }
 }
 
+// Spacer for centering first/last items
 .container-spacer {
-  width: calc((100vw - 800px) / 2); // Spacer matches centering offset
+  width: calc((100vw - 900px) / 2);
   flex-shrink: 0;
+
+  @media (max-width: 900px) {
+    width: 5vw;
+  }
 }
+
+.scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    color: $text-light-color;
+    border: none;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    &.left { left: 1rem; }
+    &.right { right: 1rem; }
+  }
+}
+

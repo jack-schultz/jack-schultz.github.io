@@ -24,15 +24,23 @@
 
         <h1 class="section-title">Challenges</h1>
 
-        <div class="scrollable-container">
-            <div class="scrollable-container-panel"></div>
-            <div class="container-spacer"></div> <!-- Start spacer -->
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" aria-label="Scroll left">‹</button>
 
-            <section id="project-discordBot-challenge1" class="sub-panel"></section>
-            <section id="project-discordBot-challenge3" class="sub-panel"></section>
+            <div class="scrollable-container">
+                <div class="scrollable-container-panel"></div>
+                <div class="container-spacer"></div> <!-- Start spacer -->
 
-            <div class="container-spacer"></div> <!-- End spacer -->
+                <section id="project-discordBot-challenge1"></section>
+                <section id="project-discordBot-challenge3"></section>
+
+                <div class="container-spacer"></div> <!-- End spacer -->
+            </div>
+
+            <button class="scroll-btn right" aria-label="Scroll right">›</button>
         </div>
+        <script src="/scripts/scrollWrapper.js"></script>
+
     </main>
 
     <footer id="footer"></footer>

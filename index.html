@@ -20,15 +20,22 @@
             <h1 class="section-title">Have a look at some of my projects</h1>
         </section>
 
-        <div class="scrollable-container">
-            <div class="container-spacer"></div> <!-- Start spacer -->
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" aria-label="Scroll left">‹</button>
 
-            <section id="project-discordBot-blurb" class="sub-panel"></section>
-            <section id="project-paperio-blurb" class="sub-panel"></section>
-            <section id="project-tetris-blurb" class="sub-panel"></section>
+            <div class="scrollable-container">
+                <div class="container-spacer"></div> <!-- Start spacer -->
 
-            <div class="container-spacer"></div> <!-- End spacer -->
+                <section id="project-discordBot-blurb" class="img-panel"></section>
+                <section id="project-paperio-blurb" class="img-panel"></section>
+                <section id="project-tetris-blurb" class="img-panel"></section>
+
+                <div class="container-spacer"></div> <!-- End spacer -->
+            </div>
+
+            <button class="scroll-btn right" aria-label="Scroll right">›</button>
         </div>
+        <script src="/scripts/scrollWrapper.js"></script>
 
         <section id="skills" class="main-panel"></section>
     </main>

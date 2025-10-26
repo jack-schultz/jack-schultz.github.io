@@ -1,9 +1,6 @@
-Reusable content is stored in components.
-Layout of each page is stored in pages.
-
-HTML files in pages have content injected from components.
-
-Therefore, Unique content is in pages, reusable content is in components.
+- HTML files in pages have content injected from content folder.
+- Therefore, Unique layout is in pages, reusable written content is in content.
+- This was done to make it easier to change the layout of a pages's HTML without having to mess with English text
 
 To Test:
 all urls are root-relative URLs, meaning for testing a webserver is required.
