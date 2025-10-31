@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MeltedButter</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="/src/styles/main.css" />
 </head>
 <body>
     <header id="header"></header>
 
     <main>
+
         <section class="hero">
             <div class="hero-text">
-                <h1 class="page-title">Hello, I'm MeltedButter</h1>
-                <p>Computer Science Student | Developer | Problem Solver</p>
+                <h1 class="page-title">My Projects, All in One Place</h1>
             </div>
-            <section id="aboutme" class="main-panel"></section>
 
-            <h1 class="section-title">Have a look at some of my projects</h1>
+            <section id="projects-about" class="main-panel"></section>
+
+            <section id="project-codingClub-blurb" class="img-panel"></section>
         </section>
+
+        <section id="project-discordBot-blurb" class="img-panel"></section>
+        <section id="project-paperio-blurb" class="img-panel"></section>
+
+        <h1 class="section-title">More Projects</h1>
 
         <div class="scroll-wrapper">
             <button class="scroll-btn left" aria-label="Scroll left">‹</button>
@@ -26,8 +32,8 @@
             <div class="scrollable-container">
                 <div class="container-spacer"></div> <!-- Start spacer -->
 
-                <section id="project-discordBot-blurb" class="img-panel"></section>
-                <section id="project-paperio-blurb" class="img-panel"></section>
+                <section id="project-game-blurb" class="img-panel"></section>
+                <section id="project-thisWebsite-blurb" class="img-panel"></section>
                 <section id="project-tetris-blurb" class="img-panel"></section>
 
                 <div class="container-spacer"></div> <!-- End spacer -->
@@ -36,8 +42,6 @@
             <button class="scroll-btn right" aria-label="Scroll right">›</button>
         </div>
         <script src="/src/scripts/scrollWrapper.js"></script>
-
-        <section id="skills" class="main-panel"></section>
     </main>
 
     <footer id="footer"></footer>
