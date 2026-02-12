@@ -1,7 +1,12 @@
 {
-  "ID": "text here"
+  "ID": "text here",
+  "aboutURL": "about.html",
+  "projectsURL": "projects.html",
+  "contactURL": "contact.html",
+  "discordBotUserCount": "78 thousand",
+  "discordBotGuildCount": "250"
   /*
-  Insert {{ID}} anywhere in HTML content and it will be replaced with "text here"
+  Insert {{ID}} anywhere in HTML content, and it will be replaced with "text here"
   I added this so i can update information that changes often
   */
 }

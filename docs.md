@@ -1,7 +1,7 @@
 # Documentation
 ## Layout vs Content
-- HTML files in layouts define page structure.
-- HTML files in content contain reusable HTML fragments with English text.
+- HTML files outside the content folder define page structure.
+- HTML files inside the content folder contain reusable HTML fragments with English text.
 - During runtime, injectContent.js inserts content sections into their corresponding layout sections as defined by their IDs and paths.
 - This separation was implemented to make layout changes without editing text content directly.
 
