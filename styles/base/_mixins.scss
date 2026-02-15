@@ -1,11 +1,12 @@
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+@mixin focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px $color-surface, 0 0 0 4px $color-border-focus;
 }
 
-@mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
-  box-shadow: $shadow;
+@mixin transition($props...) {
+  $value: ();
+  @each $p in $props {
+    $value: append($value, $p $transition-normal, comma);
+  }
+  transition: $value;
 }

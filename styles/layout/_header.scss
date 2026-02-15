@@ -1,10 +1,16 @@
 header {
-  background-color: $secondary-color;
-  color: $text-light-color;
-  text-align: center;
-  padding: 1rem 0;
-
-  top: 0;
+  background-color: $color-surface;
+  border-bottom: 2px solid $color-accent;
+  padding: 1rem 1.5rem;
   position: sticky;
-  z-index: 999;
+  top: 0;
+  z-index: 100;
+
+  @media (max-width: $bp-tablet) {
+    padding: 0.75rem 1rem;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 0.6rem 0.75rem;
+  }
 }

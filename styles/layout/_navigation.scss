@@ -3,19 +3,30 @@ nav {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 0;
     margin: 0;
 
-    li {
-      a {
-        color: $text-light-color;
-        text-decoration: none;
-        font-weight: bold;
+    @media (max-width: $bp-tablet) {
+      gap: 1.25rem;
+    }
 
-        &:hover {
-          text-decoration: underline;
-        }
+    @media (max-width: $bp-mobile) {
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    li a {
+      color: $color-text;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      @include transition(color);
+      padding: 0.25rem 0; // larger tap target
+
+      &:hover {
+        color: $color-accent;
       }
     }
   }

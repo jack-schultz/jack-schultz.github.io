@@ -1,43 +1,46 @@
 .scrollable-container {
-  // --- Layout & centering logic ---
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-
   display: flex;
   gap: 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  background: transparent;
 
-  // Hide scrollbars cross-browser
-  scrollbar-width: none;       // Firefox
-  -ms-overflow-style: none;    // IE/Edge
-  &::-webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-  // Each project section
+  // One card width so one item sits in the middle; spacers center it
   section {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+    flex-shrink: 0;
+    width: 900px;
+    max-width: 90vw;
+    scroll-snap-align: center;
+    opacity: 0.6;
+    transform: scale(0.97);
+    transition: opacity $transition-normal, transform $transition-normal;
 
     &.active {
-      transform: scale(1);
       opacity: 1;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-      z-index: 2;
+      transform: scale(1);
+      z-index: 1;
     }
   }
 
-  // Responsive layout
   @media (max-width: 900px) {
     section {
       flex-direction: column-reverse;
       width: 90vw;
+      min-width: 90vw;
       text-align: center;
 
       img {
@@ -49,12 +52,18 @@
       }
     }
   }
+
+  @media (max-width: $bp-mobile) {
+    section {
+      width: 92vw;
+      min-width: 92vw;
+    }
+  }
 }
 
-// Spacer for centering first/last items
 .container-spacer {
-  width: calc((100vw - 900px) / 2);
   flex-shrink: 0;
+  width: max(0px, calc((100vw - 900px) / 2));
 
   @media (max-width: 900px) {
     width: 5vw;
@@ -62,31 +71,92 @@
 }
 
 .scroll-wrapper {
-  position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: $color-bg-alt;
 
-  .scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    color: $text-light-color;
-    border: none;
-    font-size: 2rem;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  > .section-title {
+    margin: 0;
+    padding: 2rem 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $color-text-muted;
+    text-align: center;
 
-    &:hover {
-      background: rgba(0, 0, 0, 0.7);
+    @media (max-width: $bp-tablet) {
+      padding: 1.5rem 1rem 0.75rem;
+      font-size: 1.1rem;
     }
 
-    &.left { left: 1rem; }
-    &.right { right: 1rem; }
+    @media (max-width: $bp-mobile) {
+      padding: 1.25rem 0.75rem 0.5rem;
+      font-size: 1rem;
+    }
   }
 }
 
+.scroll-wrapper-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-wrapper .scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: $color-surface;
+  color: $color-text;
+  border: 1px solid $color-border;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  min-width: 2.75rem; // touch target
+  min-height: 2.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  @include transition(background-color, border-color);
+
+  &:hover {
+    background: $color-accent-light;
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+
+  &.left {
+    left: 1rem;
+
+    @media (max-width: $bp-mobile) {
+      left: 0.5rem;
+    }
+  }
+  &.right {
+    right: 1rem;
+
+    @media (max-width: $bp-mobile) {
+      right: 0.5rem;
+    }
+  }
+
+  @media (max-width: $bp-tablet) {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.35rem;
+  }
+
+  @media (max-width: $bp-mobile) {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}

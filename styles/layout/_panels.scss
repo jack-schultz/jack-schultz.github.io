@@ -1,114 +1,176 @@
 .main-panel {
   scroll-snap-align: center;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.75rem 2rem;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
   text-align: left;
 
-  flex-shrink: 0;
-  gap: 2rem;
+  @media (max-width: $bp-tablet) {
+    margin: 1.5rem auto;
+    padding: 1.25rem 1.5rem;
+  }
 
-  margin: 2rem auto 2rem;
-  padding: 1.5rem 2rem;
+  @media (max-width: $bp-mobile) {
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+  }
 
-  background: linear-gradient(to bottom right, $background-panel-color, $background-gradient-color);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   h2 {
-    border-bottom: 2px solid #ccc;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-bottom: 2px solid $color-accent;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+    }
   }
 }
 
 .img-panel {
   scroll-snap-align: center;
-  width: 900px;
-  text-align: left;
-
-  margin: 2rem auto 2rem;
-  padding: 1.5rem;
-
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.75rem 2rem;
   display: flex;
   justify-content: space-between;
-  //align-items: center;
   gap: 2rem;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  text-align: left;
 
-  background: linear-gradient(to bottom right, $background-panel-color, $background-gradient-color);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-
-  // Left text column
-  div {
-    //justify-content: space-between; // pushes button group to bottom
-    //display: flex;
-    //flex: 1;
-    //flex-direction: column;
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+    margin: 1.5rem auto;
+    padding: 1.25rem 1.5rem;
+    gap: 1.25rem;
   }
 
-  // Right image column
+  @media (max-width: $bp-mobile) {
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+    gap: 1rem;
+  }
+
   img {
     flex-shrink: 0;
-    width: 350px;
+    width: 320px;
     max-width: 40%;
-    border-radius: 10px;
+    border-radius: $radius-md;
     object-fit: contain;
-    //box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: $bp-tablet) {
+      width: 100%;
+      max-width: 100%;
+      order: -1; // image first on narrow
+    }
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
+    margin: 0 0 1rem;
     padding-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-bottom: 2px solid $color-accent;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.05rem;
+    }
   }
 }
 
 .timeline-panel {
   max-width: 900px;
-  background: linear-gradient(to bottom right, $background-panel-color, $background-gradient-color);
-  padding: 1.5rem 2rem;
   margin: 0 auto 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.75rem 2rem;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
   position: relative;
 
+  @media (max-width: $bp-tablet) {
+    margin: 0 auto 1.5rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  @media (max-width: $bp-mobile) {
+    margin: 0 auto 1rem;
+    padding: 1rem 1rem;
+  }
+
   h2 {
-    border-bottom: 2px solid #ccc;
+    margin: 0 0 1.5rem;
     padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-bottom: 2px solid $color-accent;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
   }
 
   ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     position: relative;
 
-    // Timeline vertical line
     &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 1rem;
-      width: 2px;
+      width: 1px;
       height: 100%;
-      background: #ccc;
+      background: $color-border;
+
+      @media (max-width: $bp-mobile) {
+        left: 0.5rem;
+      }
     }
 
     li {
       position: relative;
       margin-left: 2.5rem;
       padding-left: 1rem;
-      transition: margin-top 0.4s ease;
+      padding-bottom: 1.25rem;
+
+      @media (max-width: $bp-mobile) {
+        margin-left: 1.75rem;
+        padding-left: 0.75rem;
+        padding-bottom: 1rem;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
 
       &::before {
         content: "";
         position: absolute;
-        left: -2.2rem;
-        top: 0.4rem;
-        width: 10px;
-        height: 10px;
-        background-color: #007BFF;
+        left: -2.25rem;
+        top: 0.35rem;
+        width: 8px;
+        height: 8px;
+        background: $color-accent;
         border-radius: 50%;
-        border: 2px solid white;
-        box-shadow: 0 0 0 2px #ccc;
+
+        @media (max-width: $bp-mobile) {
+          left: -1.6rem;
+          width: 6px;
+          height: 6px;
+          top: 0.4rem;
+        }
       }
     }
   }
