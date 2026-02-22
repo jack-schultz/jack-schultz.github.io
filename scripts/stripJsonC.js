@@ -5,8 +5,12 @@ export async function fetchJsonc(path) {
     return JSON.parse(cleanText);
 }
 
-function stripJsonComments(jsonc) {
-    return jsonc
-        .replace(/\/\*[\s\S]*?\*\//g, '')     // remove /* multi-line comments */
-        .replace(/\/\/.*(?=[\n\r])/g, '');    // remove // single-line comments
+function stripJsonComments(text) {
+    // Remove block comments
+    text = text.replace(/\/\*[\s\S]*?\*\//g, '');
+
+    // Remove line comments ONLY if not inside string
+    text = text.replace(/(^|[^:\\])\/\/.*$/gm, '$1');
+
+    return text
 }
