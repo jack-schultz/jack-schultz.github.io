@@ -13,6 +13,9 @@
   "githubURL": "https://github.com/MeltedButter77",
   "mapURL": "https://www.openstreetmap.org/relation/11381689",
 
+  "gameURL": "https://meltedbutter.dev/Game/",
+  "tetrisURL": "https://meltedbutter.dev/Tetris/",
+
   // Short Information
   "discordBotUserCount": "78 thousand",
   "discordBotGuildCount": "250",
