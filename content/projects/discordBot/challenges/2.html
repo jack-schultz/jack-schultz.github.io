@@ -5,7 +5,7 @@
     <p>
         One tricky issue I faced was dealing with users rapidly joining and leaving the channel
         hub, especially in quick succession. Since the bot responds to voice state updates, multiple
-        overlapping events could trigger simultaneously—leading to race conditions. For example,
+        overlapping events could trigger simultaneously, leading to race conditions. For example,
         the bot might try to create a new temporary channel while also trying to delete it, or it
         might attempt to move a user to a channel that no longer exists.
     </p>

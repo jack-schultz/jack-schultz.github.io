@@ -1,12 +1,26 @@
 {
   "ID": "text here",
+
+  // Internal Page URLS
   "aboutURL": "/about.html",
   "projectsURL": "/projects.html",
   "contactURL": "/contact.html",
+  "homeURL": "/index.html",
+  "discordBotURL": "/projects/discordBot.html",
+  "codingClubURL": "/projects/codingClub.html",
+
+  // External Page URLS
+  "githubURL": "https://github.com/MeltedButter77",
+  "mapURL": "https://www.openstreetmap.org/relation/11381689",
+
+  // Short Information
   "discordBotUserCount": "78 thousand",
-  "discordBotGuildCount": "250"
+  "discordBotGuildCount": "250",
+  "codingLanguages": "Python, JavaScript, C++, Java",
+  "occupation": "Student with part-time work",
+  "hobbies": "Robotics, couch co-op games, language learning, reading and sports"
   /*
   Insert {{ID}} anywhere in HTML content, and it will be replaced with "text here"
-  I added this so i can update information that changes often
+  I added this so I can update information that changes often
   */
 }

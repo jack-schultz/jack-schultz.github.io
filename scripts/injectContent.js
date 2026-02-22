@@ -28,7 +28,7 @@ const sectionPaths = {
   'project-discordBot-challenge3': '/content/projects/discordBot/challenges/3.html',
   'project-discordBot-features': '/content/projects/discordBot/features.html',
   'project-discordBot-impact': '/content/projects/discordBot/impact.html',
-  'project-discordBot-skillsUsed': '/content/projects/discordBot/technologies.html',
+  'project-discordBot-technologies': '/content/projects/discordBot/technologies.html',
 
   'project-tetris-blurb': '/content/projects/tetris/blurb.html',
 
