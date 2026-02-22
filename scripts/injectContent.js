@@ -28,13 +28,21 @@ const sectionPaths = {
   'project-discordBot-challenge3': '/content/projects/discordBot/challenges/3.html',
   'project-discordBot-features': '/content/projects/discordBot/features.html',
   'project-discordBot-impact': '/content/projects/discordBot/impact.html',
-  'project-discordBot-skillsUsed': '/content/projects/discordBot/skillsUsed.html',
+  'project-discordBot-skillsUsed': '/content/projects/discordBot/technologies.html',
 
   'project-tetris-blurb': '/content/projects/tetris/blurb.html',
 
   'project-paperio-blurb': '/content/projects/paperio/blurb.html',
 
   'project-codingClub-blurb': '/content/projects/codingClub/blurb.html',
+  'project-codingClub-impact': '/content/projects/codingClub/impact.html',
+  'project-codingClub-overview': '/content/projects/codingClub/overview.html',
+  'project-codingClub-responsibilities': '/content/projects/codingClub/responsibilities.html',
+  'project-codingClub-skills': '/content/projects/codingClub/skills.html',
+  'project-codingClub-technologies': '/content/projects/codingClub/technologies.html',
+  'project-codingClub-challenge1': '/content/projects/codingClub/challenges/1.html',
+  'project-codingClub-challenge2': '/content/projects/codingClub/challenges/2.html',
+  'project-codingClub-challenge3': '/content/projects/codingClub/challenges/3.html',
 
   'project-thisWebsite-blurb': '/content/projects/this-website/blurb.html',
 

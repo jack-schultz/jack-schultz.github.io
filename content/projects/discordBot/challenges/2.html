@@ -1,7 +1,7 @@
 <div>
-    <h2>Handling Concurrency</h2>
+    <h1>Handling Concurrency</h1>
 
-    <h3>The Problem</h3>
+    <h2>The Problem</h2>
     <p>
         One tricky issue I faced was dealing with users rapidly joining and leaving the channel
         hub, especially in quick succession. Since the bot responds to voice state updates, multiple
@@ -10,20 +10,25 @@
         might attempt to move a user to a channel that no longer exists.
     </p>
 
-    <h3>The Solution</h3>
+    <h2>The Solution</h2>
     <p>
         To prevent this, I implemented checks to verify the current voice state before taking any
-        action. I also added small delays and used flags to ensure that only one operation (like
-        creating or deleting a channel) could occur at a time for each user. Where necessary, I
-        wrapped critical sections in try/except blocks to handle potential edge cases gracefully,
-        like trying to delete a channel that was already deleted or moving a user who had already
-        disconnected.
+        action. I implemented per-user synchronisation logic to prevent concurrent channel creation or deletion operations.
+        Where necessary, I utilised defensive programming to ensure safe handling of inconsistent or stale states.
     </p>
 
-    <h3>Outcome</h3>
+    <h2>Outcome</h2>
     <p>
         These changes made the bot much more stable and resilient under real-world use, especially
         in servers where users frequently join and leave voice channels quickly. It also helped
         prevent ghost channels or unexpected errors due to overlapping events.
     </p>
+
+    <h2>What I Learned</h2>
+    <ul>
+        <li>Asynchronous systems</li>
+        <li>Event-driven architecture</li>
+        <li>Concurrency risks</li>
+        <li>Reliable engineering</li>
+    </ul>
 </div>

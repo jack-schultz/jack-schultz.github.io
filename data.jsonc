@@ -1,8 +1,8 @@
 {
   "ID": "text here",
-  "aboutURL": "about.html",
-  "projectsURL": "projects.html",
-  "contactURL": "contact.html",
+  "aboutURL": "/about.html",
+  "projectsURL": "/projects.html",
+  "contactURL": "/contact.html",
   "discordBotUserCount": "78 thousand",
   "discordBotGuildCount": "250"
   /*

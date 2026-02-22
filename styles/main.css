@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
   padding: 0.5rem 1.25rem;
-  min-height: 2.5rem;
+  min-height: 2rem;
   font-size: 0.9rem;
   font-weight: 500;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -240,6 +240,18 @@ footer {
   .main-panel {
     margin: 1rem auto;
     padding: 1rem 1rem;
+  }
+}
+.main-panel h1 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .main-panel h1 {
+    font-size: 1.95rem;
+    margin-bottom: 0.75rem;
   }
 }
 .main-panel h2 {
@@ -597,7 +609,7 @@ main {
 .page-title {
   padding: 2.5rem 0 0.5rem;
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 2.75rem;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -617,7 +629,7 @@ main {
 .section-title {
   margin: 0;
   padding: 2rem 0 1rem;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-weight: 600;
   color: #6b6359;
 }

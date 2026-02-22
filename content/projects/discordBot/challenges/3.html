@@ -1,7 +1,7 @@
 <div>
-    <h2>Displaying Information to Users</h2>
+    <h1>Displaying Information to Users</h1>
 
-    <h3>The Problem</h3>
+    <h2>The Problem</h2>
     <p>
         In previous projects, I implemented many commands that displayed information
         to users. However, this approach often left users uncertain about their permissions
@@ -9,15 +9,14 @@
         effectively.
     </p>
 
-    <h3>The Solution</h3>
+    <h2>The Solution</h2>
     <p>
         To address this, I created a persistent message in each channel’s associated text channel.
-        This message displayed key information about the voice channel and included interactive
-        buttons to modify the temporary voice channel settings. This approach provided users
+        This message provided real-time system state visibility and direct user control over channel configuration.
+        This approach provided users
         with immediate, clear feedback on what actions they could take and how to control their
-        channels. While this worked well for basic management, I wanted to further improve the
-        system to provide a more dynamic and intuitive way to lock or hide channels, as well as
-        to whitelist or blacklist specific users from accessing public channels.
+        channels. This worked well for basic management and was a more dynamic and intuitive for advanced control
+        like locking or hiding channels, as well as managing a whitelist and blacklist for specific users or roles from accessing the user's channel.
     </p>
 
     <h2>Results</h2>
@@ -31,15 +30,20 @@
     <h2>What I Learned</h2>
     <p>
         The method used to communicate functionality to users was a key aspect of this project.
-        By creating a persistent message in the associated text channel, I was able to provide
+        By creating a persistent control interface using interactive components in the associated text channel, I was able to provide
         users with immediate feedback on what actions they could take and how to control their
         channels. This approach not only improved the user experience but also provided a more
         dynamic and intuitive way to manage multiple features with complex interactions.
     </p>
+    <ul>
+        <li>Frontend/backend interaction</li>
+        <li>State synchronization</li>
+        <li>User-driven system control</li>
+        <li>UI design for complex systems</li>
+    </ul>
 </div>
 <div class="image-column">
     <img src="/media/discordbot/menu.png" alt="">
     <img src="/media/discordbot/control-hidden.png" alt="">
-    <img src="/media/discordbot/control-allow-users.png" alt="">
 </div>
 
