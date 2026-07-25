@@ -8,6 +8,10 @@
   "homeURL": "/index.html",
   "discordBotURL": "/projects/discordBot.html",
   "codingClubURL": "/projects/codingClub.html",
+  "thisWebsiteURL": "/projects/thisWebsite.html",
+  "tetrisProjectURL": "/projects/tetris.html",
+  "gameProjectURL": "/projects/game.html",
+  "paperioURL": "/projects/paperio.html",
 
   // External Page URLS
   "githubURL": "https://github.com/jack-schultz",

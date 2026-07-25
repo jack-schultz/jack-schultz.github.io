@@ -4,7 +4,7 @@
         <li>Languages: Python</li>
         <li>Libraries: pygame-ce</li>
     </ul>
-    <a href="/projects/paperio.html" class="button">Read More</a>
+    <a href="{{paperioURL}}" class="button">Read More</a>
     <a href="https://github.com/Melted-Coding-Club/3.3-Paper-io" class="button">GitHub</a>
 </div>
 <img src="/media/gifs/paper-io.gif" alt="Animated screenshot of Discord Bot">

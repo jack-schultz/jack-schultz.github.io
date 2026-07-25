@@ -1,9 +1,9 @@
 <nav>
     <ul>
-        <li><a href="{{homeURL}}">Home</a></li>
-        <li><a href="{{aboutURL}}">About</a></li>
-        <li><a href="{{projectsURL}}">Projects</a></li>
-        <li><a href="{{contactURL}}">Contact</a></li>
-        <li><a href="{{githubURL}}">Github</a></li>
+        <li><a href="{{homeURL}}">Main</a></li>
+        <li><a href="{{aboutURL}}">About Me</a></li>
+        <li><a href="{{projectsURL}}">My Projects</a></li>
+        <li><a href="{{contactURL}}">Contact Me</a></li>
+        <li><a href="{{githubURL}}">My Github</a></li>
     </ul>
 </nav>

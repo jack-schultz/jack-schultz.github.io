@@ -31,8 +31,12 @@ const sectionPaths = {
   'project-discordBot-technologies': '/content/projects/discordBot/technologies.md',
 
   'project-tetris-blurb': '/content/projects/tetris/blurb.md',
+  'project-tetris-why': '/content/projects/tetris/why.md',
+  'project-tetris-features': '/content/projects/tetris/features.md',
 
   'project-paperio-blurb': '/content/projects/paperio/blurb.md',
+  'project-paperio-why': '/content/projects/paperio/why.md',
+  'project-paperio-features': '/content/projects/paperio/features.md',
 
   'project-codingClub-blurb': '/content/projects/codingClub/blurb.md',
   'project-codingClub-impact': '/content/projects/codingClub/impact.md',
@@ -45,8 +49,12 @@ const sectionPaths = {
   'project-codingClub-challenge3': '/content/projects/codingClub/challenges/3.md',
 
   'project-thisWebsite-blurb': '/content/projects/this-website/blurb.md',
+  'project-thisWebsite-why': '/content/projects/this-website/why.md',
+  'project-thisWebsite-features': '/content/projects/this-website/features.md',
 
   'project-game-blurb': '/content/projects/game/blurb.md',
+  'project-game-why': '/content/projects/game/why.md',
+  'project-game-features': '/content/projects/game/features.md',
 };
 
 // Loop through each section defined in the map
