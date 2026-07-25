@@ -1,4 +1,5 @@
-<h2>Timeline</h2>
+## Timeline
+
 <ul>
     <li data-date="2026-01-01">2026: Started Bachelor of Computer Science</li>
     <li data-date="2025-01-01">2025: Paid to teach Coding Club at former school and worked part-time throughout the year</li>

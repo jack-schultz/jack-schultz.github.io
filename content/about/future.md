@@ -1,0 +1,10 @@
+## What I'm Building Towards
+
+Right now, I'm focused on improving my skills and gaining hands-on
+experience in the tech industry. I'm especially drawn to roles where I
+can both build things and help others, whether that's through software
+development, support engineering, or technical education. Long-term,
+I'd love to work on tools that lower the barrier to entry for new developers
+or empower young learners.
+
+I don't just want to build software that works. I want to build software that matters.

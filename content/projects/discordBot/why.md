@@ -1,0 +1,13 @@
+## Why I Built This Bot
+
+In active Discord communities, voice channels can quickly become cluttered with unused rooms, making navigation
+confusing and discouraging user engagement. At the same time, static channels offer little flexibility or control to
+the users actually in them.
+
+I built **Robotnic** to solve this. The bot dynamically manages
+voice channels based on real user activity. When a user joins a "channel hub," a temporary voice channel is
+automatically created for them. When they leave, it disappears. No admin cleanup required. On top of that, users have
+full control over their temporary voice room, including the ability to hide it, lock it, or manage access.
+
+The goal was to create a clean, user-friendly, and self-moderating voice channel experience. One that empowers users,
+reduces moderator overhead, and keeps the server tidy and inviting.

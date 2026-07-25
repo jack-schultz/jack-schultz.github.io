@@ -1,8 +1,5 @@
 <div>
     <h2>Tetris with Pygame</h2>
-    <p>
-
-    </p>
     <ul>
         <li>Languages: Python</li>
         <li>Libraries: pygame-ce</li>

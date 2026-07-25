@@ -1,0 +1,1 @@
+&copy; 2024-2026 Jack Schultz. All rights reserved.

@@ -1,0 +1,10 @@
+## Teaching Others
+
+My love for coding evolved into a love for teaching others about the systems I explore.
+I've volunteered hundreds of hours helping others learn to program throughout high school,
+mentoring younger students in both robotics and coding clubs,
+and creating accessible examples to explain tricky concepts. I enjoy the
+challenge of explaining something as clearly as possible. Teaching pushes
+me to be a better developer: I have to understand my tools, communicate clearly,
+and stay curious enough to keep learning myself.
+Helping others grow is just as rewarding as building something new.

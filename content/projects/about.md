@@ -1,0 +1,14 @@
+## How I Make Things
+
+All of my projects are made completely from scratch. I don't use templates,
+tutorials, or large frameworks. Almost all of my knowledge is self-taught
+through trial and error and I've spent hours learning new languages,
+frameworks, and tools. My biggest resources are official documentation,
+online examples like stake overflow, and the results of my mistakes.
+
+## Project Quality
+
+I do not like to create janky results. I want other coders to look at my code
+and be able to see that I've put in the time to learn the best way to do
+something for my use case. I want to share my knowledge in a way that is easy to
+understand and build upon.

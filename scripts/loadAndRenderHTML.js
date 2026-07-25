@@ -1,22 +1,25 @@
+import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 import { fetchJsonc } from '/scripts/stripJsonC.js';
 
-// Load an HTML file and apply basic templating using values from data.jsonc
+marked.setOptions({ gfm: true });
+
+// Load a markdown file, apply templating from data.jsonc, and render to HTML
 export async function loadAndRenderHTML(path) {
     const res = await fetch(path);
-    let html = await res.text();
+    let md = await res.text();
 
     let data = {};
     try {
         data = await fetchJsonc('/data.jsonc');
     } catch (e) {
         console.error("JSONC load failed:", e);
-        return html;
+        return marked.parse(md);
     }
 
-    html = html.replace(/{{(.*?)}}/g, (_, key) => {
+    md = md.replace(/{{(.*?)}}/g, (_, key) => {
         key = key.trim();
         return data[key] ?? _;
     });
 
-    return html;
+    return marked.parse(md);
 }
