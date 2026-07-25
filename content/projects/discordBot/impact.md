@@ -1,7 +1,6 @@
 ## Impact
 
-Since launch, **Dr Robotnic** has been installed in over **{{discordBotGuildCount}} Discord servers**, serving
-more than **{{discordBotUserCount}} users** across a wide range of communities. This bot has solved real
+Since launch, **Dr Robotnic** has been installed in **{{discordBotGuildCount}} Discord servers**, serving **{{discordBotUserCount}} users** across a wide range of communities. This bot has solved real
 problems for real people: over a dozen server admins and users have personally joined the support server to offer
 feedback and thanks. Many now rely on it daily to reduce moderation load and enhance the user experience.
 

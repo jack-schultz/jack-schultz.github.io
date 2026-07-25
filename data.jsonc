@@ -21,11 +21,12 @@
   "tetrisURL": "https://jackschultz.dev/Tetris/",
 
   // Short Information
-  "discordBotUserCount": "78 thousand",
-  "discordBotGuildCount": "250",
+  "discordBotUserCount": "over 85 thousand",
+  "discordBotGuildCount": "over 250",
   "codingLanguages": "Python, JavaScript, C++, Java",
   "occupation": "Student with part-time work",
   "hobbies": "Robotics, couch co-op games, language learning, reading and sports"
+
   /*
   Insert {{ID}} anywhere in HTML content, and it will be replaced with "text here"
   I added this so I can update information that changes often
