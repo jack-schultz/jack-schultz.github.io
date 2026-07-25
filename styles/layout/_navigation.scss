@@ -18,15 +18,18 @@ nav {
     }
 
     li a {
-      color: $color-text;
+      color: $color-text-muted;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       @include transition(color);
-      padding: 0.25rem 0; // larger tap target
+      padding: 0.25rem 0;
 
       &:hover {
         color: $color-accent;
+        text-shadow: 0 0 8px rgba($color-accent, 0.4);
       }
     }
   }

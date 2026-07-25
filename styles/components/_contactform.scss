@@ -45,7 +45,7 @@ textarea {
   font-size: 1rem;
   font-family: $font-sans;
   color: $color-text;
-  background: $color-surface;
+  background: $color-bg;
   resize: vertical;
   @include transition(border-color);
 
@@ -67,19 +67,23 @@ textarea {
 .submit-button {
   align-self: flex-start;
   padding: 0.6rem 1.25rem;
-  min-height: 2.75rem; // touch target
-  font-size: 0.9rem;
+  min-height: 2.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: $color-surface;
-  background: $color-accent;
+  font-family: $font-mono;
+  letter-spacing: 0.04em;
+  color: $color-accent;
+  background: transparent;
   border: 1px solid $color-accent;
   border-radius: $radius-sm;
   cursor: pointer;
-  @include transition(background-color, border-color);
+  @include transition(background-color, border-color, box-shadow);
 
   &:hover {
-    background: $color-accent-hover;
+    background: $color-accent-light;
     border-color: $color-accent-hover;
+    color: $color-accent-hover;
+    box-shadow: 0 0 12px rgba($color-accent, 0.15);
   }
 
   &:focus-visible {

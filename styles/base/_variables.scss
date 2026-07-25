@@ -1,22 +1,22 @@
-// Beginner uni student — warm, a bit of personality
-$color-bg: #f7f5f0;
-$color-bg-alt: #eeeae3;
-$color-surface: #fffefb;
-$color-border: #e0dbd2;
-$color-border-focus: #b85c38;
+// Dark terminal — clean hacker aesthetic
+$color-bg: #0a0e0a;
+$color-bg-alt: #0f1410;
+$color-surface: #121812;
+$color-border: #1e2e1e;
+$color-border-focus: #33ff66;
 
-$color-text: #2d2a26;
-$color-text-muted: #6b6359;
+$color-text: #c8d4c8;
+$color-text-muted: #6b7a6b;
 
-$color-accent: #b85c38;
-$color-accent-hover: #9a4a2a;
-$color-accent-light: #f0e4de;
+$color-accent: #33ff66;
+$color-accent-hover: #28d955;
+$color-accent-light: rgba(51, 255, 102, 0.1);
 
 $font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+$font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
 
-$radius-sm: 4px;
-$radius-md: 6px;
+$radius-sm: 3px;
+$radius-md: 4px;
 $transition-fast: 0.15s ease;
 $transition-normal: 0.2s ease;
 

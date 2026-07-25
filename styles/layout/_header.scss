@@ -1,6 +1,7 @@
 header {
   background-color: $color-surface;
-  border-bottom: 2px solid $color-accent;
+  border-bottom: 1px solid $color-border;
+  box-shadow: 0 1px 0 rgba($color-accent, 0.15);
   padding: 1rem 1.5rem;
   position: sticky;
   top: 0;

@@ -85,9 +85,11 @@
   > .section-title {
     margin: 0;
     padding: 2rem 0 1rem;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: $color-text-muted;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     text-align: center;
 
     @media (max-width: $bp-tablet) {
@@ -129,6 +131,7 @@
     background: $color-accent-light;
     border-color: $color-accent;
     color: $color-accent;
+    box-shadow: 0 0 12px rgba($color-accent, 0.15);
   }
 
   &.left {
