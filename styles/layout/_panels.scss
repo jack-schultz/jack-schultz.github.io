@@ -78,8 +78,6 @@
     flex-shrink: 0;
     width: 320px;
     max-width: 40%;
-    border-radius: $radius-md;
-    border: 1px solid $color-border;
     object-fit: contain;
 
     @media (max-width: $bp-tablet) {
