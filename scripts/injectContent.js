@@ -55,6 +55,10 @@ const sectionPaths = {
   'project-game-blurb': '/content/projects/game/blurb.md',
   'project-game-why': '/content/projects/game/why.md',
   'project-game-features': '/content/projects/game/features.md',
+
+  'project-bookingSystem-blurb': '/content/projects/bookingSystem/blurb.md',
+  'project-bookingSystem-why': '/content/projects/bookingSystem/why.md',
+  'project-bookingSystem-features': '/content/projects/bookingSystem/features.md',
 };
 
 // Loop through each section defined in the map

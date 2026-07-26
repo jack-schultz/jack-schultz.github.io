@@ -1,5 +1,5 @@
 <div>
-    <h2>Dr Robotnic (Discord Bot)</h2>
+    <h2>Discord Bot (Named Robotnic)</h2>
     <p>
         Active in <strong>{{discordBotGuildCount}}</strong> Discord servers, serving <strong>{{discordBotUserCount}} users</strong>, It provides functionality to dynamically create
         voice channels for users as they are needed. This declutters the chatroom and gives user's

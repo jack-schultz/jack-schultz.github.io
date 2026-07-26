@@ -1,5 +1,5 @@
 <div>
-    <h2>An Example Game with Pygame</h2>
+    <h2>Level-Based Puzzle Game</h2>
     <ul>
         <li>Languages: Python</li>
         <li>Libraries: pygame-ce</li>

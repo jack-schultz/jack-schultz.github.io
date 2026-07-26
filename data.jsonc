@@ -12,6 +12,7 @@
   "tetrisProjectURL": "/projects/tetris.html",
   "gameProjectURL": "/projects/game.html",
   "paperioURL": "/projects/paperio.html",
+  "bookingSystemURL": "/projects/bookingSystem.html",
 
   // External Page URLS
   "githubURL": "https://github.com/jack-schultz",
@@ -23,7 +24,7 @@
   // Short Information
   "discordBotUserCount": "over 85 thousand",
   "discordBotGuildCount": "over 250",
-  "codingLanguages": "Python, JavaScript, C++, Java",
+  "codingLanguages": "Python, JavaScript, C++",
   "occupation": "Student with part-time work",
   "hobbies": "Robotics, couch co-op games, language learning, reading and sports"
 

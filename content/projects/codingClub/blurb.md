@@ -1,5 +1,5 @@
 <div>
-    <h2>Coding Club Instructor</h2>
+    <h2>Teaching Highschoolers to Code</h2>
     <p>
         I founded and now run a coding club at my former high school, where I teach programming to
         students with varying experience levels. What began as a volunteer initiative became a paid
