@@ -75,5 +75,3 @@ for (const [id, path] of Object.entries(sectionPaths)) {
     applyTimelineSpacing();
   }
 }
-
-
