@@ -722,9 +722,6 @@ strong {
   color: #dce8dc;
 }
 
-.hero {
-  background: #0a0e0a;
-}
 .hero .hero-text p, .hero .hero-text h1, .hero .hero-text h2 {
   color: #c8d4c8;
   margin: 0;
@@ -734,5 +731,6 @@ strong {
   color: #6b7a6b;
   font-size: 0.95rem;
 }
-
-/*# sourceMappingURL=main.css.map */
+.hero {
+  background: #0a0e0a;
+}
