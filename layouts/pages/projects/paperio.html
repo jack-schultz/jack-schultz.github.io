@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    <header id="header">{{> header}}</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">About This Little Game</h1>
+                <p>This was a <strong>Learning Project</strong> which I enjoyed</p>
+            </div>
+            <section id="project-paperio-why" class="main-panel">{{{md:projects/paperio/why}}}</section>
+        </section>
+
+        <section id="project-paperio-features" class="main-panel">{{{md:projects/paperio/features}}}</section>
+        <nav id="nav-view-projects" class="page-nav page-nav--cta"><a href="/projects.html" class="button button--large" aria-label="Page navigation">View all projects →</a></nav>
+    </main>
+
+    <footer id="footer">{{> footer}}</footer>
+</body>
+</html>

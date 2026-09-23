@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    <header id="header">{{> header}}</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">This is my Discord Bot</h1>
+                <p>I named it <strong>Robotnic</strong></p>
+            </div>
+            <section id="project-discordBot-why" class="main-panel">{{{md:projects/discordBot/why}}}</section>
+        </section>
+
+        <section id="project-discordBot-features" class="main-panel">{{{md:projects/discordBot/features}}}</section>
+        <section id="project-discordBot-impact" class="main-panel">{{{md:projects/discordBot/impact}}}</section>
+
+        <h1 class="section-title">Challenges In Detail</h1>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+
+            <div class="scrollable-container">
+                <div class="scrollable-container-panel"></div>
+                <div class="container-spacer"></div>
+
+                <section id="project-discordBot-challenge1" class="main-panel">{{{md:projects/discordBot/challenges/1}}}</section>
+                <section id="project-discordBot-challenge2" class="main-panel">{{{md:projects/discordBot/challenges/2}}}</section>
+                <section id="project-discordBot-challenge3" class="main-panel">{{{md:projects/discordBot/challenges/3}}}</section>
+
+                <div class="container-spacer"></div>
+            </div>
+
+            <button class="scroll-btn right" aria-label="Scroll right">›</button>
+        </div>
+        <script src="/scripts/scrollWrapper.js"></script>
+
+        <section id="project-discordBot-technologies" class="main-panel">{{{md:projects/discordBot/technologies}}}</section>
+        <nav id="nav-view-projects" class="page-nav page-nav--cta"><a href="/projects.html" class="button button--large" aria-label="Page navigation">View all projects →</a></nav>
+    </main>
+
+    <footer id="footer">{{> footer}}</footer>
+</body>
+</html>

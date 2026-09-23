@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    <header id="header">{{> header}}</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">My Projects, All in One Place</h1>
+            </div>
+            <section id="projects-about" class="main-panel">{{{md:projects/about}}}</section>
+        </section>
+
+        <section id="project-discordBot-blurb" class="img-panel">{{{partial:project-blurb id=discordBot}}}</section>
+        <section id="project-codingClub-blurb" class="img-panel">{{{partial:project-blurb id=codingClub}}}</section>
+        <section id="project-bookingSystem-blurb" class="img-panel">{{{partial:project-blurb id=bookingSystem}}}</section>
+
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+
+            <h1 class="section-title">Projects Created to Teach Others</h1>
+            <div class="scroll-wrapper-inner">
+                <div class="scrollable-container">
+                    <div class="container-spacer"></div>
+
+                    <section id="project-game-blurb" class="img-panel">{{{partial:project-blurb id=game}}}</section>
+                    <section id="project-tetris-blurb" class="img-panel">{{{partial:project-blurb id=tetris}}}</section>
+                    <section id="project-paperio-blurb" class="img-panel">{{{partial:project-blurb id=paperio}}}</section>
+
+                    <div class="container-spacer"></div>
+                </div>
+            </div>
+
+            <button class="scroll-btn right" aria-label="Scroll right">›</button>
+        </div>
+
+        <script src="/scripts/scrollWrapper.js"></script>
+    </main>
+
+    <footer id="footer">{{> footer}}</footer>
+</body>
+</html>

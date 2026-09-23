@@ -1,10 +1,13 @@
-<div>
-    <h2>Paper-io with Pygame</h2>
-    <ul>
-        <li>Languages: Python</li>
-        <li>Libraries: pygame-ce</li>
-    </ul>
-    <a href="{{paperioURL}}" class="button">Read More</a>
-    <a href="https://github.com/Melted-Coding-Club/3.3-Paper-io" class="button">GitHub</a>
-</div>
-<img src="/media/gifs/paper-io.gif" alt="Animated screenshot of Discord Bot">
+---
+title: Paper-io with Pygame
+image: /assets/gifs/paper-io.gif
+imageAlt: Animated screenshot of Paper-io
+links:
+  - label: Read More
+    url: "{{paperioURL}}"
+  - label: GitHub
+    url: https://github.com/Melted-Coding-Club/3.3-Paper-io
+---
+
+- Languages: Python
+- Libraries: pygame-ce

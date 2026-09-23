@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    <header id="header">{{> header}}</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">So, You want to know more?</h1>
+            </div>
+            <section id="facts" class="main-panel">{{{md:about/facts}}}</section>
+        </section>
+
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+
+            <h1 class="section-title">Behind the Projects</h1>
+            <div class="scroll-wrapper-inner">
+                <div class="scrollable-container">
+                <div class="container-spacer"></div>
+
+                <section id="aboutme" class="main-panel">{{{md:about/aboutMe}}}</section>
+                <section id="motivation" class="main-panel">{{{md:about/motivation}}}</section>
+                <section id="whyTeach" class="main-panel">{{{md:about/whyTeach}}}</section>
+                <section id="future" class="main-panel">{{{md:about/future}}}</section>
+                <section id="nonTech" class="main-panel">{{{md:about/nonTech}}}</section>
+
+                <div class="container-spacer"></div>
+                </div>
+            </div>
+
+            <button class="scroll-btn right" aria-label="Scroll right">›</button>
+        </div>
+        <script src="/scripts/scrollWrapper.js"></script>
+
+        <section id="timeline" class="timeline-panel">{{{partial:timeline}}}</section>
+    </main>
+
+    <footer id="footer">{{> footer}}</footer>
+    <script src="/scripts/applyTimelineSpacing.js"></script>
+</body>
+</html>

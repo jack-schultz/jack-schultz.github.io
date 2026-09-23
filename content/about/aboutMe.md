@@ -8,5 +8,4 @@ Bachelor of Computer Science degree in 2026.
 
 I've coded Discord bots, run my own home server, mentored high school students
 in both **robotics and problem-solving using python**. I continue to enjoy the challenge of turning ideas into functioning technology,
-most notable of which is my <a href="{{discordBotURL}}">Discord Bot</a> now **servicing {{discordBotUserCount}} users**.
-
+most notable of which is my [Discord Bot]({{discordBotURL}}) now **servicing {{discordBotUserCount}} users**.

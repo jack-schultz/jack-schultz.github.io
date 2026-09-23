@@ -1,11 +1,14 @@
-<div>
-    <h2>This Website</h2>
-    <p>This is template text</p>
-    <ul>
-        <li>Languages: HTML, CSS, JavaScript</li>
-        <li>Content: Markdown with runtime injection</li>
-        <li>Hosting: GitHub Pages</li>
-    </ul>
-    <a href="{{thisWebsiteURL}}" class="button">Read More</a>
-    <a href="https://github.com/jack-schultz/jack-schultz.github.io" class="button">GitHub</a>
-</div>
+---
+title: This Website
+links:
+  - label: Read More
+    url: "{{thisWebsiteURL}}"
+  - label: GitHub
+    url: https://github.com/jack-schultz/jack-schultz.github.io
+---
+
+This is template text
+
+- Languages: HTML, CSS, JavaScript
+- Content: Markdown with static site build
+- Hosting: GitHub Pages

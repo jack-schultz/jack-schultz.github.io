@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    <header id="header">{{> header}}</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">This Portfolio Website</h1>
+                <p>Built from scratch with a <strong>content-driven layout</strong></p>
+            </div>
+            <section id="project-thisWebsite-why" class="main-panel">{{{md:projects/this-website/why}}}</section>
+        </section>
+
+        <section id="project-thisWebsite-features" class="main-panel">{{{md:projects/this-website/features}}}</section>
+        <nav id="nav-view-projects" class="page-nav page-nav--cta"><a href="/projects.html" class="button button--large" aria-label="Page navigation">View all projects →</a></nav>
+    </main>
+
+    <footer id="footer">{{> footer}}</footer>
+</body>
+</html>

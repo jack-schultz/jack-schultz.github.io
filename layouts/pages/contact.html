@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jack Schultz</title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    {{> head}}
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXCS298Q6D"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-SXCS298Q6D');
-</script>
-
 <body>
-    <header id="header"></header>
+    <header id="header">{{> header}}</header>
 
     <main>
         <h1 class="page-title">Contact Me</h1>
@@ -33,7 +19,6 @@
             method="POST"
             class="contact-form"
             >
-            <!-- Honeypot for spam bots -->
             <input type="text" name="_gotcha" style="display:none" />
 
             <div class="form-group">
@@ -54,10 +39,8 @@
             <button type="submit" class="submit-button">Send Message</button>
         </form>
         </section>
-
     </main>
 
-    <footer id="footer"></footer>
-    <script type="module" src="/scripts/injectContent.js"></script>
+    <footer id="footer">{{> footer}}</footer>
 </body>
 </html>

@@ -1,21 +1,36 @@
 # Documentation
+
 ## Layout vs Content
-- HTML files outside the content folder define page structure.
-- Markdown files inside the content folder contain reusable text fragments with English content.
-- During runtime, injectContent.js inserts content sections into their corresponding layout sections as defined by their IDs and paths.
-- This separation was implemented to make layout changes without editing text content directly.
 
-## Testing
-To Test:
-all urls are root-relative URLs, meaning for testing a webserver is required.
-Use `python -m http.server 8000` to start a webserver.
-Then navigate to http://localhost:8000/
+- **Layouts** (`layouts/`) define page structure, chrome, and where content is placed.
+- **Content** (`content/`) holds reusable Markdown section fragments (prose only; use YAML frontmatter for structured fields like project blurbs and the timeline).
+- **Build** (`npm run build`) renders Markdown into layouts and writes finished HTML to `dist/`.
 
-## Content Injection
-injectContent.js handles injecting content from markdown files into layout.
-- It has a dictionary named sectionPaths, which maps element IDs to a path for its content.
-- When executed this replaces each element's inner HTML with the rendered HTML from the pathed files.
+Non-developers should edit files under `content/` and values in `data.jsonc`. Developers change structure under `layouts/`.
 
-## Global Injection
-data.jsonc holds a key value list. Any key that is found within double parenthesis in content will be replaced with its value.
-This logic is handled by loadAndRenderHTML.js after being parsed through stripJsonC.js. Markdown files are then parsed to HTML using marked (loaded via CDN).
+## Template syntax
+
+| Syntax | Meaning |
+|--------|---------|
+| `{{key}}` | Value from `data.jsonc` |
+| `{{{md:path}}}` | Render `content/<path>.md` as HTML |
+| `{{> name}}` | Include `layouts/partials/<name>.html` |
+| `{{{partial:name id=...}}}` | Include a partial with arguments (e.g. project blurbs) |
+
+## Global values
+
+`data.jsonc` holds key/value pairs. Any `{{key}}` in content or layouts is replaced at build time.
+
+## Build and preview
+
+```bash
+npm install
+npm run build          # output → dist/
+npm run dev            # watch + serve dist/ at http://localhost:8000/
+```
+
+GitHub Pages is deployed from `dist/` to the `gh-pages` branch via `.github/workflows/deploy.yml`.
+
+## Project blurbs
+
+Blurb Markdown files use frontmatter for title, image, and links; the body is plain Markdown. Example: `content/projects/discordBot/blurb.md`.

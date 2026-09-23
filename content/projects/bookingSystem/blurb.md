@@ -1,10 +1,12 @@
-<div>
-    <h2>Booking System</h2>
-    <p>This is template text</p>
-    <ul>
-        <li>Languages: </li>
-        <li>Libraries: </li>
-        <li>Hosting: </li>
-    </ul>
-    <a href="{{bookingSystemURL}}" class="button">Read More</a>
-</div>
+---
+title: Booking System
+links:
+  - label: Read More
+    url: "{{bookingSystemURL}}"
+---
+
+This is template text
+
+- Languages:
+- Libraries:
+- Hosting:
