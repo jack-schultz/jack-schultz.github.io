@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jack Schultz</title>
+<link rel="stylesheet" href="/styles/main.css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXCS298Q6D"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SXCS298Q6D');
+</script>
+
+</head>
+<body>
+    <header id="header"><nav>
+    <ul>
+        <li><a href="/index.html">Overview</a></li>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/projects.html">My Projects</a></li>
+        <li><a href="/contact.html">Contact Me</a></li>
+        <li><a href="https://github.com/jack-schultz">My Github</a></li>
+    </ul>
+</nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="page-title">This is my Discord Bot</h1>
+                <p>I named it <strong>Robotnic</strong></p>
+            </div>
+            <section id="project-discordBot-why" class="main-panel"><h2>Why I Built This Bot</h2>
+<p>In active Discord communities, voice channels can quickly become cluttered with unused rooms, making navigation
+confusing and discouraging user engagement. At the same time, static channels offer little flexibility or control to
+the users actually in them.</p>
+<p>I built <strong>Robotnic</strong> to solve this. The bot dynamically manages
+voice channels based on real user activity. When a user joins a &quot;channel hub,&quot; a temporary voice channel is
+automatically created for them. When they leave, it disappears. No admin cleanup required. On top of that, users have
+full control over their temporary voice room, including the ability to hide it, lock it, or manage access.</p>
+<p>The goal was to create a clean, user-friendly, and self-moderating voice channel experience. One that empowers users,
+reduces moderator overhead, and keeps the server tidy and inviting.</p></section>
+        </section>
+
+        <section id="project-discordBot-features" class="main-panel"><h2>Features</h2>
+<ul>
+<li><strong>Automatic Channel Creation &amp; Cleanup</strong><br>Channels are created when needed and automatically deleted
+when empty, reducing channel bloat and keeping the server
+clean.</li>
+<li><strong>User-Controlled Permissions</strong><br>Users can lock their temporary channels, hide them from others,
+or create personalised access lists (whitelist/blacklist), all
+from a persistent control panel.</li>
+<li><strong>Persistent Interface</strong><br>Each channel has an associated text panel with buttons and live
+information, helping users understand and manage their voice
+channel with ease. No commands needed.</li>
+<li><strong>Crash-Resistant State Management</strong><br>Channel data is saved to a local database (SQLite), ensuring the
+bot can recover and clean up correctly even after restarts or crashes.</li>
+<li><strong>Built for Real Use</strong><br>The bot was designed to run 24/7, respond to rapid user activity,
+and operate reliably even in high-turnover environments with
+multiple overlapping events.</li>
+</ul></section>
+        <section id="project-discordBot-impact" class="main-panel"><h2>Impact</h2>
+<p>Since launch, <strong>Dr Robotnic</strong> has been installed in <strong>over 250 Discord servers</strong>, serving <strong>over 85 thousand users</strong> across a wide range of communities. This bot has solved real
+problems for real people: over a dozen server admins and users have personally joined the support server to offer
+feedback and thanks. Many now rely on it daily to reduce moderation load and enhance the user experience.</p>
+<p>The project is <strong>self-hosted, free, and open-source</strong>. By making the codebase public and continuously
+improving it, I&#39;ve allowed others to learn from, modify, or contribute to the project, while I maintain reliable
+uptime and handle all server costs myself.</p></section>
+
+        <h1 class="section-title">Challenges In Detail</h1>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+
+            <div class="scrollable-container">
+                <div class="scrollable-container-panel"></div>
+                <div class="container-spacer"></div>
+
+                <section id="project-discordBot-challenge1" class="main-panel"><h1>Storing Information</h1>
+<h2>Aim</h2>
+<p>When a user joins a specific, pre-determined voice channel (channel hub), I want to create
+a new voice channel (temporary voice channel) and move them into it. When the user leaves
+that channel, the temporary voice channel should be deleted.</p>
+<h2>Initial Plan</h2>
+<p>Originally, I was planning to only store the channel hubs&#39; IDs and keep the temporary voice
+channels&#39; IDs in a list in memory. However, this approach had a major flaw. If the bot
+restarted or crashed, it would stop tracking any existing temporary voice channels. This
+meant admins would have to manually delete any leftover temporary channels.</p>
+<h2>Improved Solution</h2>
+<p>To fix this issue, I redesigned the system to use persistent storage so the bot could recover its state after restarts or crashes.
+The only question was: which type of database? This led me to lightly research different
+types of databases. For my use case, I ended up choosing SQLite, as it&#39;s a simple and
+lightweight solution that works well. Since it&#39;s stored in a file, I could view and query
+the database easily through my IDE, which aided my learning.</p>
+<h2>Refactoring for Maintainability</h2>
+<p>As the project grew, manually managing the database queries became messy and hard to track.
+To improve modularity, I implemented a database abstraction layer to decouple persistence
+logic from business logic, improving maintainability and extensibility.</p>
+<p>As new functionality was implemented, the database schema had to be considered. New features often required new columns
+in the database which may not exist in older instances. To solve this, I implemented automatic schema
+migration to ensure forward compatibility without manual database intervention. This was
+done by storing new columns in a dictionary which checks for their existence and adds them with default data if missing</p>
+<h2>Results</h2>
+<p>The bot now consistently handles temporary voice channels without leaving any orphaned
+ones behind, even after restarts or crashes. SQLite proved to be reliable and low-maintenance,
+and the abstraction layer made the overall codebase more maintainable. Users
+were moved seamlessly between channels, and admins no longer had to worry about manual cleanups.</p>
+<h2>What I Learned</h2>
+<p>I learned that even small-scale features can benefit from persistent storage and a bit
+of foresight into failure cases. I also gained a much deeper understanding of working
+with SQLite in a real project and how to abstract logic in a way that improves
+maintainability. Most importantly, I saw the value of planning for edge cases, especially
+in bots that are expected to run 24/7.</p>
+<ul>
+<li>Persistent state management</li>
+<li>Schema migration strategies</li>
+<li>Abstraction layers</li>
+<li>Separation of concerns</li>
+<li>Fault tolerance</li>
+<li>Data integrity</li>
+</ul></section>
+                <section id="project-discordBot-challenge2" class="main-panel"><h1>Handling Concurrency</h1>
+<h2>The Problem</h2>
+<p>One tricky issue I faced was dealing with users rapidly joining and leaving the channel
+hub, especially in quick succession. Since the bot responds to voice state updates, multiple
+overlapping events could trigger simultaneously, leading to race conditions. For example,
+the bot might try to create a new temporary channel while also trying to delete it, or it
+might attempt to move a user to a channel that no longer exists.</p>
+<h2>The Solution</h2>
+<p>To prevent this, I implemented checks to verify the current voice state before taking any
+action. I implemented per-user synchronisation logic to prevent concurrent channel creation or deletion operations.
+Where necessary, I utilised defensive programming to ensure safe handling of inconsistent or stale states.</p>
+<h2>Outcome</h2>
+<p>These changes made the bot much more stable and resilient under real-world use, especially
+in servers where users frequently join and leave voice channels quickly. It also helped
+prevent ghost channels or unexpected errors due to overlapping events.</p>
+<h2>What I Learned</h2>
+<ul>
+<li>Asynchronous systems</li>
+<li>Event-driven architecture</li>
+<li>Concurrency risks</li>
+<li>Reliable engineering</li>
+</ul></section>
+                <section id="project-discordBot-challenge3" class="main-panel"><h1>Displaying Information to Users</h1>
+<h2>The Problem</h2>
+<p>In previous projects, I implemented many commands that displayed information
+to users. However, this approach often left users uncertain about their permissions
+and capabilities within their voice channels, as well as unsure how to use the bot
+effectively.</p>
+<h2>The Solution</h2>
+<p>To address this, I created a persistent message in each channel&#39;s associated text channel.
+This message provided real-time system state visibility and direct user control over channel configuration.
+This approach provided users
+with immediate, clear feedback on what actions they could take and how to control their
+channels. This worked well for basic management and was a more dynamic and intuitive for advanced control
+like locking or hiding channels, as well as managing a whitelist and blacklist for specific users or roles from accessing the user&#39;s channel.</p>
+<h2>Results</h2>
+<p>The result was a clear, user-friendly interface that gave channel owners greater control
+over who can view or use their temporary voice channels. This improved user experience
+and reduced confusion by making permissions and channel status instantly visible and
+easily adjustable.</p>
+<h2>What I Learned</h2>
+<p>The method used to communicate functionality to users was a key aspect of this project.
+By creating a persistent control interface using interactive components in the associated text channel, I was able to provide
+users with immediate feedback on what actions they could take and how to control their
+channels. This approach not only improved the user experience but also provided a more
+dynamic and intuitive way to manage multiple features with complex interactions.</p>
+<ul>
+<li>Frontend/backend interaction</li>
+<li>State synchronization</li>
+<li>User-driven system control</li>
+<li>UI design for complex systems</li>
+</ul>
+<p><img src="/assets/discordbot/menu.png" alt="Bot menu">
+<img src="/assets/discordbot/control-hidden.png" alt="Hidden channel controls"></p></section>
+
+                <div class="container-spacer"></div>
+            </div>
+
+            <button class="scroll-btn right" aria-label="Scroll right">›</button>
+        </div>
+        <script src="/scripts/scrollWrapper.js"></script>
+
+        <section id="project-discordBot-technologies" class="main-panel"><h2>Tech &amp; Skills Used</h2>
+<ul>
+<li><strong>Python, discord.py and pycord</strong><br>Designed and implemented an event-driven system handling voice state
+updates, channel lifecycle management, and Discord API integration.</li>
+<li><strong>SQLite</strong><br>Implemented persistent data storage to maintain system state across
+crashes and restarts, including automatic schema updates and
+forward-compatible migrations.</li>
+<li><strong>Database Architecture</strong><br>Created a database abstraction layer to separate persistence logic from
+business logic, improving maintainability, extensibility, and code clarity.</li>
+<li><strong>Asynchronous Programming</strong><br>Managed concurrent Discord events safely, implementing synchronization
+logic to prevent race conditions and ensure consistent system state.</li>
+<li><strong>Fault-Tolerant System Design</strong><br>Built recovery-safe logic to prevent orphaned channels and ensure reliable
+operation during rapid user interactions, disconnects, and restarts.</li>
+<li><strong>Event-Driven Architecture</strong><br>Structured the bot around Discord&#39;s real-time event system, enabling
+scalable and responsive handling of channel creation, deletion, and
+user interaction.</li>
+<li><strong>Interactive UI Systems</strong><br>Developed persistent control panels using interactive components, allowing
+users to dynamically configure channel permissions and settings.</li>
+<li><strong>Linux Deployment &amp; Systemd</strong><br>Deployed and managed the bot as a system service on a self-hosted Linux
+server, ensuring automatic startup and crash recovery. Later migrated to
+enterprise hosting solution to mitigate residential network and power outages.</li>
+<li><strong>Version Control &amp; Open Source Practices</strong><br>Used Git and GitHub for version control, structured commits, documentation,
+and iterative feature development.</li>
+<li><strong>Production Debugging &amp; Reliability</strong><br>Diagnosed and resolved real-world issues including race conditions,
+stale state, and edge cases arising from asynchronous event timing.</li>
+</ul></section>
+        <nav id="nav-view-projects" class="page-nav page-nav--cta"><a href="/projects.html" class="button button--large" aria-label="Page navigation">View all projects →</a></nav>
+    </main>
+
+    <footer id="footer">&copy; 2024-2026 Jack Schultz. All rights reserved.
+</footer>
+</body>
+</html>
